@@ -34,7 +34,8 @@ class Migration(migrations.Migration):
                 ('author_name', models.CharField(max_length=50, null=True, verbose_name='Author name')),
                 ('content', models.TextField(verbose_name='Content')),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('post', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comments', to='core.post')),
+                ('post', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                 related_name='comments', to='core.post')),
             ],
             options={
                 'verbose_name': 'Comment',
