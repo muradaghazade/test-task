@@ -32,15 +32,15 @@ services:
     volumes:
       - ./redisdb/:/var/lib/redis
 
-  # celery:
-  #   build: 
-  #     context: .
-  #     dockerfile: celery.dockerfile
-  #   volumes:
-  #     - .:/code
-  #   links:
-  #     - redis
-  #     - postgres
-  #   depends_on:
-  #     - "redis"
-  #     - "postgres"
+  celery:
+    build: 
+      context: .
+      dockerfile: celery.dockerfile
+    volumes:
+      - .:/code
+    links:
+      - redis
+      - postgres
+    depends_on:
+      - "redis"
+      - "postgres"
