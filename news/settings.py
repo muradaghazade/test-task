@@ -26,8 +26,8 @@ SECRET_KEY = "django-insecure-s0wr^*emu8su)9m77g(yc*qv*ml6s7smmkn@6$f%(2tsoc(%08
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "https://news-api-test.herokuapp.com/",
-    "news-api-test.herokuapp.com",
+    "https://murads-test-task-api.herokuapp.com/",
+    "murads-test-task-api.herokuapp.com",
     "127.0.0.1",
 ]
 
