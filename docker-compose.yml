@@ -31,3 +31,16 @@ services:
       - 6379:6379
     volumes:
       - ./redisdb/:/var/lib/redis
+
+  celery:
+    build: 
+      context: .
+      dockerfile: celery.dockerfile
+    volumes:
+      - .:/code
+    links:
+      - redis
+      - postgres
+    depends_on:
+      - "redis"
+      - "postgres"
