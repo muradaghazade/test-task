@@ -45,4 +45,4 @@ vine==5.0.0
 virtualenv==20.10.0
 wcwidth==0.2.5
 psycopg2-binary==2.8.6
-psycopg2==2.7.7
+# psycopg2==2.7.7
