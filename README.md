@@ -1,6 +1,17 @@
 # News Post API
 
 ## Steps to run a project:
+
+## Run project with Docker
+
+```
+$ docker-compose up -d --build
+```
+
+
+
+## Run project without docker
+
 ## 1. Install all packages from requirements.txt file.
 
 ```
@@ -32,7 +43,7 @@ $ python3 manage.py runserver
 ### You can easily change time interval of Periodic task that resets upvotes from admin panel.
 
 ## Heroku Link
- [https://news-api-test.herokuapp.com](https://news-api-test.herokuapp.com)
+ [https://murads-test-task-api.herokuapp.com/](https://murads-test-task-api.herokuapp.com/)
 
 ## Postman Collection Link
 [https://www.getpostman.com/collections/08a40ac6394427b330f9](https://www.getpostman.com/collections/08a40ac6394427b330f9)

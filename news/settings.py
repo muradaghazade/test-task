@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     "https://murads-test-task-api.herokuapp.com/",
     "murads-test-task-api.herokuapp.com",
     "127.0.0.1",
+    'localhost',
 ]
 
 
@@ -84,11 +85,11 @@ WSGI_APPLICATION = "news.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": 'da7lbomoj28cpb',
-        "HOST": 'ec2-35-171-57-132.compute-1.amazonaws.com',
-        "USER": 'hmcnwibjpryhut',
-        "PORT": 5432,
-        "PASSWORD": 'cd066f7b698ff0c5d213596e695e911f7e522262a38fcf95ef3e18a45eaccfdc',
+        "NAME": os.getenv("POSTGRES_DB", "news_db"),
+        "USER": os.getenv("POSTGRES_USER", "test_user"),
+        "PORT": os.getenv("POSTGRES_PORT", 5432),
+        "PASSWORD": os.getenv("POSTGRES_PASSWORD", "12345"),
+        "HOST": os.getenv("POSTGRES_HOST", "127.0.0.1"),
     }
 }
 
